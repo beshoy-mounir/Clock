@@ -14,10 +14,28 @@ body main .wrapper {
     align-items: center;
 }
 body main .wrapper .container {
-    height: 30%;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+}
+
+body main .wrapper .container .outter {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: conic-gradient(#ff9f0a 0%, black 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body main .wrapper .container .inner {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
