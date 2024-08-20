@@ -3,16 +3,18 @@ setInterval(() => {
     let minutes = new Date().getMinutes();
     let seconds = new Date().getSeconds();
     let zero = "0";
-    if (hours <= 10) {
+    if (hours <= 9) {
         hours = zero.concat(hours);
     } else if (hours >= 12) {
         hours -= 12;
-        hours = zero.concat(hours);
+        if (hours <= 9) {
+            hours = zero.concat(hours);
+        }
     }
-    if (minutes <= 10) {
+    if (minutes <= 9) {
         minutes = zero.concat(minutes);
     }
-    if (seconds <= 10) {
+    if (seconds <= 9) {
         seconds = zero.concat(seconds);
     }
 
