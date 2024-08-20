@@ -1,14 +1,21 @@
 let i,
+    hours,
+    minutes,
+    seconds,
+    zero,
+    dayAndNight,
     c = document.getElementById("outter");
 
 setInterval(() => {
-    let hours = new Date().getHours();
-    let minutes = new Date().getMinutes();
-    let seconds = new Date().getSeconds();
-    let zero = "0";
+    hours = new Date().getHours();
+    minutes = new Date().getMinutes();
+    seconds = new Date().getSeconds();
+    zero = "0";
     if (hours <= 9) {
+        dayAndNight = "Am";
         hours = zero.concat(hours);
     } else if (hours >= 12) {
+        dayAndNight = "Bm";
         hours -= 12;
         if (hours <= 9) {
             hours = zero.concat(hours);
@@ -20,7 +27,7 @@ setInterval(() => {
     if (seconds <= 9) {
         seconds = zero.concat(seconds);
     }
-    time.innerHTML = `${hours}:${minutes}:${seconds}`;
+    time.innerHTML = `${hours}:${minutes}:${seconds} ${dayAndNight}`;
 
     // Coloc counter
 
