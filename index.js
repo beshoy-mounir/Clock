@@ -7,6 +7,7 @@ setInterval(() => {
         hours = zero.concat(hours);
     } else if (hours >= 12) {
         hours -= 12;
+        hours = zero.concat(hours);
     }
     if (minutes <= 10) {
         minutes = zero.concat(minutes);
